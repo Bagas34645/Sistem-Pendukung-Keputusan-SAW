@@ -6,11 +6,11 @@
       <thead>
         <tr>
           <th width="25px">No</th>
-          <th width="50px">Tanggal</th>
-          <th width="25px">Tahun</th>
+          <th width="70px">Tanggal</th>
+          <th width="20px">Tahun</th>
           <th width="70px">NIS</th>
-          <th width="150px">Nama</th>
-          <th width="140px">Pendapatan Ortu</th>
+          <th width="150px">Nama Siswa</th>
+          <th width="130px">Pendapatan Ortu</th>
           <th width="25px">Nilai</th>
           <th width="100px">Jml Saudara</th>
           <th width="95px">Edit | Hapus</th>

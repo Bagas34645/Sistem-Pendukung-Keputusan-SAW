@@ -9,7 +9,7 @@
           <th width="150px">Nama Siswa</th>
           <th width="300px">Alamat</th>
           <th width="100px">No. Telepon</th>
-          <th width="80px">Edit | Hapus</th>
+          <th width="95px">Edit | Hapus</th>
         </tr>
       </thead>
       <tbody>

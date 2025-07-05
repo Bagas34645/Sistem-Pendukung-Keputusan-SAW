@@ -26,7 +26,7 @@ require "config.php";
             <li class="nav-item active"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home </a></li>
             <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-circle"></i> Siswa </a></li>
             <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
-            <li class="nav-item active"><a class="nav-link" href="?page=perangkingan"><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
+            <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
             <li class="nav-item active"><a class="nav-link" href="?page=logout"><i class="fas fa-sign-out-alt"></i> Logout </a></li>
         </ul>
     </nav>
@@ -59,6 +59,10 @@ require "config.php";
                 include "update_pendaftaran.php";
             } else {
                 include "hapus_pendaftaran.php";
+            }
+        } elseif ($page == "perangkingan") {
+            if ($action == "") {
+                include "perangkingan.php";
             }
         } else {
         }
