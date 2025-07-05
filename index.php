@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Jakarta");
+session_start();
 require "config.php";
 ?>
 
@@ -20,13 +21,31 @@ require "config.php";
 
 <body>
 
+    <!-- Cek status login atau belum -->
+    <?php
+    if ($_SESSION['status'] != "y") {
+        header("Location:login.php");
+    }
+    ?>
+
     <nav class="navbar navbar-dark bg-primary border navbar-expand-sm fixed-top">
-        <a class="navbar-brand" href="#">SPK BEASISWA</a>
+        <a class="navbar-brand" href="index.php">SPK BEASISWA</a>
         <ul class="navbar-nav">
             <li class="nav-item active"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home </a></li>
-            <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-circle"></i> Siswa </a></li>
-            <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
-            <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
+            <?php if ($_SESSION['level'] == "Pimpinan") {
+            ?>
+                <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
+            <?php } elseif ($_SESSION['level'] == "Super Admin") {
+            ?>
+                <li class="nav-item active"><a class="nav-link" href="?page=users"><i class="fas fa-user-tie"></i> Users </a></li>
+                <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-graduate"></i> Siswa </a></li>
+                <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
+                <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
+            <?php }else { ?>
+                <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-graduate"></i> Siswa </a></li>
+                <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
+            <?php } ?>
+
             <li class="nav-item active"><a class="nav-link" href="?page=logout"><i class="fas fa-sign-out-alt"></i> Logout </a></li>
         </ul>
     </nav>
@@ -64,7 +83,20 @@ require "config.php";
             if ($action == "") {
                 include "perangkingan.php";
             }
+        } elseif ($page == "users") {
+            if ($action == "") {
+                include "tampil_users.php";
+            } elseif ($action == "tambah") {
+                include "tambah_users.php";
+            } elseif ($action == "update") {
+                include "update_users.php";
+            } else {
+                include "hapus_users.php";
+            }
         } else {
+            if ($action == "") {
+                include "logout.php";
+            }
         }
         ?>
     </div>
