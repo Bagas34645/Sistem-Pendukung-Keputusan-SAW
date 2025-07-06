@@ -2,6 +2,27 @@
 
 Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerima beasiswa di SMK Global Techno School. Sistem ini menggunakan metode perangkingan berdasarkan beberapa kriteria seperti pendapatan orang tua, nilai rata-rata, dan jumlah saudara.
 
+---
+
+## Tampilan Aplikasi
+
+### 1. Halaman Login
+![Halaman Login](assets/img/login.png)
+
+### 2. Dashboard
+![Dashboard](assets/img/dashboard.png)
+
+### 3. Data Siswa
+![Data Siswa](assets/img/data_siswa.png)
+
+### 4. Perangkingan
+![Perangkingan](assets/img/perangkingan.png)
+
+### 5. Laporan PDF
+![Laporan PDF](assets/img/laporan_pdf.png)
+
+---
+
 ## Fitur
 
 - **Manajemen Siswa**: Tambah, ubah, hapus, dan tampilkan data siswa.
@@ -55,7 +76,7 @@ Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerim
 
 2. **Konfigurasi Database**
    - Buat database MySQL, misal: `beasiswa`.
-   - Import struktur dan data awal ke database.
+   - Import struktur data awal ke database.
    - Edit file [`config.php`](config.php) dan sesuaikan parameter koneksi database:
      ```php
      $conn = new mysqli("localhost", "username", "password", "beasiswa");
@@ -91,11 +112,6 @@ Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerim
 - [FPDF](https://www.fpdf.org/) (sudah termasuk di folder `fpdf/`)
 - Bootstrap 4 (CSS & JS, sudah di folder `assets/`)
 - jQuery, DataTables, Chosen (sudah di folder `assets/`)
-
-## Catatan Keamanan
-
-- Password user disimpan dalam bentuk hash MD5. Untuk keamanan lebih baik, gunakan hash yang lebih kuat seperti `password_hash`.
-- Validasi input belum sepenuhnya aman dari SQL Injection. Disarankan menggunakan prepared statement.
 
 ## Lisensi
 
