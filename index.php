@@ -35,13 +35,15 @@ require "config.php";
             <?php if ($_SESSION['level'] == "Pimpinan") {
             ?>
                 <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
+                <li class="nav-item active"><a class="nav-link" href="?page=report"><i class="fa fa-print"></i> Report </a></li>
             <?php } elseif ($_SESSION['level'] == "Super Admin") {
             ?>
                 <li class="nav-item active"><a class="nav-link" href="?page=users"><i class="fas fa-user-tie"></i> Users </a></li>
                 <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-graduate"></i> Siswa </a></li>
                 <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
                 <li class="nav-item active"><a class="nav-link" href="?page=perangkingan&thn="><i class="fas fa-chart-bar"></i> Perangkingan </a></li>
-            <?php }else { ?>
+                <li class="nav-item active"><a class="nav-link" href="?page=report"><i class="fa fa-print"></i> Report </a></li>
+            <?php } else { ?>
                 <li class="nav-item active"><a class="nav-link" href="?page=siswa"><i class="fas fa-user-graduate"></i> Siswa </a></li>
                 <li class="nav-item active"><a class="nav-link" href="?page=pendaftaran"><i class="fas fa-address-book"></i> Pendaftaran </a></li>
             <?php } ?>
@@ -92,6 +94,10 @@ require "config.php";
                 include "update_users.php";
             } else {
                 include "hapus_users.php";
+            }
+        } elseif ($page == "report") {
+            if ($action == "") {
+                include "report.php";
             }
         } else {
             if ($action == "") {
