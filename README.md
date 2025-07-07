@@ -1,3 +1,7 @@
+![PHP Version](https://img.shields.io/badge/php-%3E=5.6-blue)
+![License](https://img.shields.io/badge/license-Freeware-green)
+![Platform](https://img.shields.io/badge/platform-Web-blue)
+
 # SPK Beasiswa - Sistem Pendukung Keputusan Penerimaan Beasiswa
 
 Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerima beasiswa di SMK Global Techno School. Sistem ini menggunakan metode perangkingan berdasarkan beberapa kriteria seperti pendapatan orang tua, nilai rata-rata, dan jumlah saudara.
@@ -12,22 +16,21 @@ Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerim
 
 ## Hak Akses User
 
-- **Super Admin**: Kelola semua data (users, siswa, pendaftaran, perangkingan, laporan).
-- **Sub Admin**: Kelola data siswa dan pendaftaran.
-- **Pimpinan**: Hanya melihat perangkingan dan laporan.
+| Level         | Hak Akses                                                                 |
+|---------------|--------------------------------------------------------------------------|
+| Super Admin   | Kelola semua data (users, siswa, pendaftaran, perangkingan, laporan)     |
+| Sub Admin     | Kelola data siswa dan pendaftaran.                                      |
+| Pimpinan      | Hanya melihat perangkingan dan laporan.                                 |
 
 Untuk mencoba website SPK ini anda dapat mengunjungi link berikut ini:
 
-bagasabiyukumara.my.id/projects/spksaw/
-- **Super Admin**:
-  Username : superadmin
-  Password : superadmin
-- **Sub Admin**:
-  Username : subadmin
-  Password : subadmin
-- **Pimpinan**:
-  Username : pimpinan
-  Password : pimpinan
+[Coba Demo SPK Beasiswa](https://bagasabiyukumara.my.id/projects/spksaw/)
+
+| Level        | Username    | Password    |
+|--------------|-------------|-------------|
+| Super Admin  | superadmin  | superadmin  |
+| Sub Admin    | subadmin    | subadmin    |
+| Pimpinan     | pimpinan    | pimpinan    |
 
 ---
 
@@ -39,13 +42,22 @@ bagasabiyukumara.my.id/projects/spksaw/
 ### 2. Dashboard
 ![Dashboard](assets/img/dashboard.png)
 
-### 3. Data Siswa
+### 3. Data Users
+![Dashboard](assets/img/users.png)
+
+### 4. Data Siswa
 ![Data Siswa](assets/img/data_siswa.png)
 
-### 4. Perangkingan
+### 5. Data Pendaftaran
+![Data Siswa](assets/img/data_pendaftaran.png)
+
+### 6. Perangkingan
 ![Perangkingan](assets/img/perangkingan.png)
 
-### 5. Laporan PDF
+### 7. Laporan Perangkingan
+![Perangkingan](assets/img/laporan_perangkingan.png)
+
+### 8. Laporan PDF
 ![Laporan PDF](assets/img/laporan_pdf.png)
 
 ---
@@ -103,7 +115,7 @@ bagasabiyukumara.my.id/projects/spksaw/
 
 2. **Konfigurasi Database**
    - Buat database MySQL, misal: `beasiswa`.
-   - Import struktur data awal ke database.
+   - Import file `beasiswa.sql` ke database MySQL Anda.
    - Edit file [`config.php`](config.php) dan sesuaikan parameter koneksi database:
      ```php
      $conn = new mysqli("localhost", "username", "password", "beasiswa");
