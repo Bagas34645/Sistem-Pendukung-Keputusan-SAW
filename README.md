@@ -2,6 +2,33 @@
 
 Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerima beasiswa di SMK Global Techno School. Sistem ini menggunakan metode perangkingan berdasarkan beberapa kriteria seperti pendapatan orang tua, nilai rata-rata, dan jumlah saudara.
 
+## Penggunaan
+
+- **Login**: Masukkan username dan password.
+- **Navigasi**: Menu akan muncul sesuai level user.
+- **Manajemen Data**: Gunakan menu untuk menambah, mengubah, atau menghapus data siswa, users, dan pendaftaran.
+- **Perangkingan**: Pilih tahun, klik "Proses" untuk menghitung perangkingan.
+- **Laporan**: Pilih tahun, klik "Cetak" untuk download/preview PDF laporan perangkingan.
+
+## Hak Akses User
+
+- **Super Admin**: Kelola semua data (users, siswa, pendaftaran, perangkingan, laporan).
+- **Sub Admin**: Kelola data siswa dan pendaftaran.
+- **Pimpinan**: Hanya melihat perangkingan dan laporan.
+
+Untuk mencoba website SPK ini anda dapat mengunjungi link berikut ini:
+
+bagasabiyukumara.my.id/projects/spksaw/
+- **Super Admin**:
+  Username : superadmin
+  Password : superadmin
+- **Sub Admin**:
+  Username : subadmin
+  Password : subadmin
+- **Pimpinan**:
+  Username : pimpinan
+  Password : pimpinan
+
 ---
 
 ## Tampilan Aplikasi
@@ -90,20 +117,6 @@ Aplikasi web berbasis PHP untuk membantu proses seleksi dan perangkingan penerim
 4. **Akses Aplikasi**
    - Buka browser dan akses `http://localhost/beasiswa/login.php`
    - Login menggunakan akun yang sudah ada di tabel `users`.
-
-## Penggunaan
-
-- **Login**: Masukkan username dan password.
-- **Navigasi**: Menu akan muncul sesuai level user.
-- **Manajemen Data**: Gunakan menu untuk menambah, mengubah, atau menghapus data siswa, users, dan pendaftaran.
-- **Perangkingan**: Pilih tahun, klik "Proses" untuk menghitung perangkingan.
-- **Laporan**: Pilih tahun, klik "Cetak" untuk download/preview PDF laporan perangkingan.
-
-## Hak Akses User
-
-- **Super Admin**: Kelola semua data (users, siswa, pendaftaran, perangkingan, laporan).
-- **Sub Admin**: Kelola data siswa dan pendaftaran.
-- **Pimpinan**: Hanya melihat perangkingan dan laporan.
 
 ## Dependensi
 
