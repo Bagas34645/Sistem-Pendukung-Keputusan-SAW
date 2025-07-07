@@ -2,7 +2,7 @@
 // error_reporting(E_ERROR);
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname="spk";
 
 // Create connection

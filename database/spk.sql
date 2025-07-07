@@ -1,11 +1,11 @@
 -- ===============================
 -- 1. Buat database dan gunakan
 -- ===============================
-CREATE DATABASE IF NOT EXISTS spk
+CREATE DATABASE IF NOT EXISTS project
   DEFAULT CHARACTER SET utf8mb4
   DEFAULT COLLATE utf8mb4_general_ci;
 
-USE spk;
+USE project;
 
 -- ===============================
 -- 2. Matikan pengecekan foreign key agar DROP berjalan lancar
@@ -104,10 +104,10 @@ SELECT
   d.tahun AS tahun,
   d.nis AS nis,
   s.nama_siswa AS nama_siswa,
-  p.n_pendapatan AS nilai_pendapatan,
-  p.n_rata_nilai AS nilai_rata_nilai,
-  p.n_saudara AS nilai_saudara,
-  p.preferensi AS nilai_preferensi
+  p.n_pendapatan AS n_pendapatan,
+  p.n_rata_nilai AS n_rata_nilai,
+  p.n_saudara AS n_saudara,
+  p.preferensi AS preferensi
 FROM
   perangkingan p
   JOIN pendaftaran d ON p.iddaftar = d.iddaftar
