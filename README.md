@@ -115,7 +115,7 @@ Untuk mencoba website SPK ini anda dapat mengunjungi link berikut ini:
 
 2. **Konfigurasi Database**
    - Buat database MySQL, misal: `beasiswa`.
-   - Import file `beasiswa.sql` ke database MySQL Anda.
+   - Import file [`spk.sql`](database/spk.sql) ke database MySQL Anda.
    - Edit file [`config.php`](config.php) dan sesuaikan parameter koneksi database:
      ```php
      $conn = new mysqli("localhost", "username", "password", "beasiswa");
