@@ -22,7 +22,7 @@
           <tr>
             <td><?php echo $i++; ?></td>
             <td><?php echo $row['username']; ?></td>
-            <td><?php echo $row['pass']; ?></td>
+            <td><?php echo $row['password']; ?></td>
             <td><?php echo $row['level']; ?></td>
             <td align="center">
               <a class="btn btn-warning" href="?page=users&action=update&id=<?php echo $row['id']; ?>">

@@ -6,9 +6,9 @@ require "config.php";
 if (isset($_POST["submit"])) {
 
   $username = $_POST["username"];
-  $pass = md5($_POST["pass"]);
+  $password = md5($_POST["password"]);
 
-  $sql = "SELECT*FROM users where username='$username' and pass='$pass'";
+  $sql = "SELECT*FROM users where username='$username' and password='$password'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   if ($result->num_rows > 0) {
@@ -69,7 +69,7 @@ $conn->close();
               </div>
               <div class="form-group">
                 <label for="">Password</label>
-                <input type="password" class="form-control" name="pass" autocomplete="off" required>
+                <input type="password" class="form-control" name="password" autocomplete="off" required>
               </div>
               <input type="submit" class="btn btn-primary" name="submit" value="Login">
             </div>

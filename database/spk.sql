@@ -118,3 +118,11 @@ FROM
 -- ===============================
 CREATE INDEX idx_pendaftaran_nis ON pendaftaran(nis);
 CREATE INDEX idx_perangkingan_iddaftar ON perangkingan(iddaftar);
+
+-- ===============================
+-- 11. Insert data awal ke tabel users
+-- ===============================
+INSERT INTO users (level, username, password) VALUES
+('Super Admin', 'superadmin', MD5('superadmin')),
+('Sub Admin', 'subadmin', MD5('subadmin')),
+('Pimpinan', 'pimpinan', MD5('pimpinan'));

@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 
 if (isset($_POST['simpan'])) {
   $username = $_POST['username'];
-  $pass = md5($_POST['pass']);
+  $password = md5($_POST['password']);
   $level = $_POST['level'];
 
   // validasi
@@ -22,7 +22,7 @@ if (isset($_POST['simpan'])) {
 <?php
   } else {
     //proses simpan
-    $sql = "INSERT INTO users VALUES (Null,'$username','$pass','$level')";
+    $sql = "INSERT INTO users VALUES (Null,'$username','$password','$level')";
     if ($conn->query($sql) === TRUE) {
       header("Location:?page=users");
     }
@@ -44,7 +44,7 @@ if (isset($_POST['simpan'])) {
             </div>
             <div class="form-group">
               <label for="">Password</label>
-              <input type="password" class="form-control" name="pass" maxlength="100" required>
+              <input type="password" class="form-control" name="password" maxlength="100" required>
             </div>
             <div class="form-group">
               <label for="">Level</label>
